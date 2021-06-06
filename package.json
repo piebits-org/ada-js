@@ -1,0 +1,27 @@
+{
+  "name": "@piebits/ada",
+  "version": "0.1.0",
+  "description": "ADA's(piebits product) JavaScript library to Ease Dev Experience and Operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piebits-org/ada-js.git"
+  },
+  "keywords": [
+    "piebits",
+    "piebits-cloud",
+    "ada",
+    "ada-js",
+    "authentication",
+    "cloud"
+  ],
+  "author": "piebits",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/piebits-org/ada-js/issues"
+  },
+  "homepage": "https://github.com/piebits-org/ada-js#readme"
+}
