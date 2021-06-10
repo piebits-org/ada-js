@@ -29,5 +29,8 @@
         "no-underscore-dangle": "off",
         "@typescript-eslint/return-await": "off"
     },
-    "ignorePatterns": "lib/**/*"
+    "ignorePatterns": [
+        "lib/**/*",
+        "**/*.js"
+    ]
 }

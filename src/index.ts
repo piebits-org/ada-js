@@ -1,6 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
 import { BASIC } from './basic';
+import { store } from './store';
 import { CONFIG } from './types';
+import { USEROPS } from './userops';
 
 export class ADA {
   private config: CONFIG | undefined;
@@ -10,6 +12,8 @@ export class ADA {
   public supported_versions: Array<string> = ['v0.1.0'];
 
   public basic: BASIC;
+
+  public userops: USEROPS;
 
   constructor(params: CONFIG) {
     this.config = params;
@@ -31,5 +35,8 @@ export class ADA {
     });
 
     this.basic = new BASIC(this.axios_instance);
+    this.userops = new USEROPS(this.axios_instance);
   }
 }
+
+export { store };
