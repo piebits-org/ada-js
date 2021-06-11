@@ -21,7 +21,7 @@ export class USEROPS {
           },
         );
         store.set('user', data.user);
-        return Promise.resolve(data);
+        return Promise.resolve(data.user);
       }
       return Promise.reject(new Error('use class constructor'));
     } catch (e) {
