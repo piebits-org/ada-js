@@ -9,7 +9,7 @@ export class ADA {
 
   public axios_instance: AxiosInstance | undefined;
 
-  public supported_versions: Array<string> = ['v0.1.0', 'v0.2.0', 'v0.3.0'];
+  public supported_versions: Array<string> = ['v0.1.0', 'v0.2.0', 'v0.3.0', 'v0.4.0'];
 
   public basic: BASIC;
 

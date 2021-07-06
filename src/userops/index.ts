@@ -1,6 +1,6 @@
 import { AxiosInstance } from 'axios';
 import { store } from '../store';
-import { FETCH_SELF_METHOD } from './types';
+import { FETCH_SELF_METHOD, RESET_PASSWORD_METHOD, VERIFY_TOKEN_METHOD } from './types';
 
 export class USEROPS {
   private axios_instance: AxiosInstance | undefined;
@@ -40,6 +40,41 @@ export class USEROPS {
         );
         store.set('tokens', { ...store.state.tokens, ...data });
         return Promise.resolve(data);
+      }
+      return Promise.reject(new Error('use class constructor'));
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  };
+
+  public reset_password: RESET_PASSWORD_METHOD = async ({ email }) => {
+    try {
+      if (this.axios_instance) {
+        await this.axios_instance.post(
+          'userops/resetpass/email/gen',
+          {
+            email,
+          },
+        );
+        return Promise.resolve();
+      }
+      return Promise.reject(new Error('use class constructor'));
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  };
+
+  public verify_token: VERIFY_TOKEN_METHOD = async ({ token, password }) => {
+    try {
+      if (this.axios_instance) {
+        await this.axios_instance.post(
+          'userops/resetpass/email/verify',
+          {
+            token,
+            password,
+          },
+        );
+        return Promise.resolve();
       }
       return Promise.reject(new Error('use class constructor'));
     } catch (e) {
