@@ -1,6 +1,6 @@
 {
   "name": "@piebits/ada",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "ADA's(piebits product) JavaScript library to Ease Dev Experience and Operations",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
