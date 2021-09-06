@@ -15,7 +15,8 @@
         "project": "./tsconfig.json"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "eslint-plugin-import"
     ],
     "rules": {
         "@typescript-eslint/naming-convention": [
@@ -31,6 +32,7 @@
     },
     "ignorePatterns": [
         "lib/**/*",
-        "**/*.js"
+        "**/*.js",
+        "test/**/*"
     ]
 }

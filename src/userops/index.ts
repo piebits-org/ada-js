@@ -24,7 +24,7 @@ export class USEROPS {
         return Promise.resolve(data.user);
       }
       return Promise.reject(new Error('use class constructor'));
-    } catch (e) {
+    } catch (e: any) {
       return Promise.reject(new Error(e));
     }
   };
@@ -39,7 +39,7 @@ export class USEROPS {
           },
         );
         store.set('tokens', { ...store.state.tokens, ...data });
-        return Promise.resolve(data);
+        return Promise.resolve(store.state.tokens);
       }
       return Promise.reject(new Error('use class constructor'));
     } catch (e) {

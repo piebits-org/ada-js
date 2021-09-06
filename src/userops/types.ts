@@ -3,6 +3,10 @@ export interface FETCH_SELF_RES {
   email: string;
   verified: boolean;
   account_status: 'enabled' | 'disabled';
+  provider: 'basic';
+  props?: {
+    [key: string]: any
+  },
   created_at: string;
   updated_at: string;
 }
