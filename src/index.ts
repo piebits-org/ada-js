@@ -9,7 +9,7 @@ export class ADA {
 
   public axios_instance: AxiosInstance | undefined;
 
-  public supported_versions: Array<string> = ['v0.1.0', 'v0.2.0', 'v0.3.0', 'v0.4.0'];
+  public supported_versions: Array<string> = ['v0.1.0', 'v0.2.0', 'v0.3.0', 'v0.4.0', 'v0.5.0'];
 
   public basic: BASIC;
 
@@ -31,6 +31,7 @@ export class ADA {
       timeout: 5000,
       headers: {
         'x-ada-app-id': this.config.app_id,
+        'x-ada-public-key': this.config.public_key,
       },
     });
 
